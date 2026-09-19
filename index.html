@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,258 +6,385 @@
 <title>Shooting Star Coppersmith</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
+  background:#120d09;
+  color:#f5eadc;
   font-family:Georgia,"Times New Roman",serif;
-  background:#17110d;
-  color:#f4eadc;
 }
+
 header{
   text-align:center;
-  padding:38px 20px 30px;
-  background:linear-gradient(#2d1b10,#17110d);
+  padding:34px 18px 24px;
+  background:
+    radial-gradient(circle at top,#57301d 0%,#29170f 42%,#120d09 80%);
   border-bottom:1px solid #9b693c;
 }
-.brand{
-  font-size:clamp(38px,9vw,72px);
-  letter-spacing:2px;
-  color:#d99b58;
-  margin:0;
-}
-.subbrand{
-  margin:8px 0 0;
-  font-size:clamp(18px,4vw,28px);
+
+.logo{
+  font-size:clamp(42px,10vw,78px);
   letter-spacing:3px;
+  color:#d89455;
+  margin:0;
+  line-height:1;
 }
+
+.coppersmith{
+  margin-top:8px;
+  font-size:18px;
+  letter-spacing:8px;
+  color:#f2d5ad;
+}
+
 .tagline{
-  margin:24px auto 0;
-  max-width:700px;
+  margin:18px auto 0;
+  font-size:17px;
   font-style:italic;
-  font-size:20px;
-  color:#dcc5aa;
+  color:#d9b88e;
 }
+
 nav{
   display:flex;
   justify-content:center;
-  gap:28px;
   flex-wrap:wrap;
-  padding:17px;
-  background:#21160f;
-  border-bottom:1px solid #5e422d;
+  gap:8px 22px;
+  padding:17px 10px;
+  background:#19100b;
+  border-bottom:1px solid #50301e;
 }
+
 nav a{
-  color:#f1ddc3;
+  color:#e5bd8b;
   text-decoration:none;
-  font-size:16px;
+  font-size:15px;
 }
+
 .hero{
-  min-height:440px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   text-align:center;
-  padding:60px 25px;
-  background:
-    radial-gradient(circle at center,
-      #6b4325 0,
-      #382317 38%,
-      #17110d 72%);
+  padding:54px 20px 38px;
+  max-width:900px;
+  margin:auto;
 }
-.hero-inner{
-  max-width:800px;
-}
+
 .hero h2{
-  font-size:clamp(34px,8vw,64px);
-  margin:0 0 20px;
+  font-size:clamp(35px,8vw,62px);
+  color:#e4a866;
+  margin:0 0 18px;
   font-weight:normal;
 }
+
 .hero p{
-  font-size:21px;
-  line-height:1.6;
-  color:#e0cbb2;
+  max-width:680px;
+  margin:auto;
+  font-size:19px;
+  line-height:1.65;
+  color:#ead9c6;
 }
-.copper-line{
-  width:90px;
-  height:2px;
-  background:#c98545;
-  margin:28px auto;
+
+.divider{
+  width:110px;
+  height:1px;
+  background:#b67a45;
+  margin:35px auto;
 }
-section{
+
+.gallery{
   max-width:1050px;
   margin:auto;
-  padding:65px 24px;
+  padding:10px 18px 55px;
 }
-.section-title{
+
+.gallery h2{
   text-align:center;
-  font-size:38px;
+  font-size:36px;
   font-weight:normal;
-  margin:0 0 12px;
-  color:#dda15e;
+  color:#e0a260;
+  margin:15px 0 10px;
 }
-.section-intro{
-  max-width:700px;
+
+.gallery-intro{
   text-align:center;
-  margin:0 auto 42px;
-  color:#d4c0aa;
-  line-height:1.6;
-  font-size:18px;
+  color:#cdb399;
+  margin-bottom:32px;
+  font-style:italic;
 }
-.cards{
+
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:22px;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
 }
+
 .card{
-  min-height:260px;
-  padding:35px 25px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  border:1px solid #745036;
   background:
-    linear-gradient(145deg,#402719,#1d140f);
-  box-shadow:0 10px 28px rgba(0,0,0,.35);
+    linear-gradient(145deg,#2c1b12,#17100c);
+  border:1px solid #70472b;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 12px 28px rgba(0,0,0,.38);
 }
+
+.card img{
+  display:block;
+  width:100%;
+  height:340px;
+  object-fit:contain;
+  background:#f7f4ef;
+}
+
+.card-text{
+  padding:20px;
+  text-align:center;
+}
+
 .card h3{
-  margin:0 0 10px;
-  color:#e1a35e;
-  font-size:27px;
+  margin:0 0 8px;
+  color:#e3aa6b;
+  font-size:25px;
+  font-weight:normal;
 }
+
 .card p{
   margin:0;
+  color:#cdb8a2;
   line-height:1.5;
-  color:#d8c5b0;
 }
-.about{
-  background:#21160f;
-  border-top:1px solid #513824;
-  border-bottom:1px solid #513824;
+
+.feature{
+  max-width:900px;
+  margin:0 auto 60px;
+  padding:45px 24px;
+  text-align:center;
+  background:
+    radial-gradient(circle at center,#3c2417,#1a100b 70%);
+  border-top:1px solid #6d4328;
+  border-bottom:1px solid #6d4328;
 }
-.about-inner{
-  max-width:800px;
+
+.feature h2{
+  color:#e2a562;
+  font-size:34px;
+  font-weight:normal;
+  margin-top:0;
+}
+
+.feature p{
+  max-width:680px;
+  margin:auto;
+  line-height:1.7;
+  font-size:18px;
+  color:#dfccba;
+}
+
+.artist{
+  max-width:760px;
   margin:auto;
   text-align:center;
-  line-height:1.75;
-  font-size:19px;
+  padding:15px 24px 65px;
 }
+
+.artist h2{
+  color:#dfa15e;
+  font-size:34px;
+  font-weight:normal;
+}
+
+.artist p{
+  font-size:18px;
+  line-height:1.7;
+  color:#dac8b6;
+}
+
 footer{
   text-align:center;
-  padding:45px 20px;
-  color:#a99179;
-  font-size:14px;
+  padding:28px 15px 40px;
+  border-top:1px solid #4f301d;
+  color:#a98666;
+  font-size:13px;
+  letter-spacing:2px;
 }
-@media(max-width:600px){
-  header{padding-top:30px}
-  .hero{min-height:390px}
-  section{padding:50px 18px}
+
+@media(max-width:650px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .card img{
+    height:auto;
+    max-height:470px;
+  }
+
+  .hero{
+    padding-top:42px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1 class="brand">SHOOTING STAR</h1>
-  <div class="subbrand">COPPERSMITH</div>
-  <div class="copper-line"></div>
-  <p class="tagline">
-    Handcrafted in Metal. Inspired by Imagination.
-  </p>
+<header id="home">
+  <h1 class="logo">SHOOTING STAR</h1>
+  <div class="coppersmith">COPPERSMITH</div>
+  <div class="tagline">Whimsy forged in copper.</div>
 </header>
 
 <nav>
   <a href="#home">Home</a>
-  <a href="#toys">Toys</a>
-  <a href="#wallart">Wall Art</a>
+  <a href="#work">The Work</a>
   <a href="#artist">The Artist</a>
 </nav>
 
-<div class="hero" id="home">
-  <div class="hero-inner">
-    <h2>Metal Brought to Life</h2>
-    <div class="copper-line"></div>
-    <p>
-      Original handcrafted copper creations shaped individually
-      by the hands of the artisan. Each piece combines traditional
-      metalsmithing with imagination, movement and personality.
-    </p>
-  </div>
-</div>
+<section class="hero">
+  <h2>Copper Comes to Life</h2>
 
-<section id="toys">
-  <h2 class="section-title">Copper Toys</h2>
-  <p class="section-intro">
-    Whimsical handcrafted creations where metal becomes movement,
-    character and play.
+  <p>
+    Hand formed, shaped and finished one piece at a time,
+    these playful copper creations transform an ancient
+    metalworking tradition into objects filled with
+    imagination, movement and personality.
   </p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Moving Sculpture</h3>
-      <p>
-        Individually crafted copper pieces designed with character
-        and mechanical imagination.
-      </p>
-    </div>
+  <div class="divider"></div>
+</section>
 
-    <div class="card">
-      <h3>Artful Play</h3>
-      <p>
-        Objects that blur the distinction between traditional
-        craft, sculpture and toy.
-      </p>
-    </div>
+<section class="gallery" id="work">
+
+  <h2>From the Coppersmith's Bench</h2>
+
+  <div class="gallery-intro">
+    Individually handcrafted works in copper.
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+      <img
+        src="481D40DD-1B6C-42DB-AC8A-A5C2241A7054.png"
+        alt="Handcrafted copper artwork">
+
+      <div class="card-text">
+        <h3>Copper in Motion</h3>
+        <p>
+          Hammered copper becomes sculpture through
+          hand forming, balance and movement.
+        </p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img
+        src="IMG_4332.webp"
+        alt="Handcrafted copper creation">
+
+      <div class="card-text">
+        <h3>Made by Hand</h3>
+        <p>
+          Each piece carries the subtle marks and
+          character of the craftsman's hand.
+        </p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img
+        src="IMG_4333.jpeg"
+        alt="Shooting Star copper artwork">
+
+      <div class="card-text">
+        <h3>Metal With Personality</h3>
+        <p>
+          Traditional coppersmithing meets a distinctly
+          playful imagination.
+        </p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div style="
+        min-height:340px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:35px;
+        text-align:center;
+        background:
+          radial-gradient(circle,#4c2a18,#1b100b 70%);
+      ">
+        <div>
+          <div style="
+            font-size:72px;
+            color:#d99857;
+            line-height:1;
+          ">✦</div>
+
+          <h3 style="
+            color:#e2a663;
+            font-size:28px;
+            font-weight:normal;
+            margin:18px 0 10px;
+          ">The Fairy Wand</h3>
+
+          <p style="
+            color:#cdb49d;
+            line-height:1.55;
+            margin:0;
+          ">
+            Our missing creation has a place waiting
+            for it. The original image can be added here
+            without rebuilding the page.
+          </p>
+        </div>
+      </div>
+    </article>
+
   </div>
 </section>
 
-<div class="about">
-<section id="wallart">
-  <h2 class="section-title">Wall Art</h2>
-  <p class="section-intro">
-    Sculptural copper artwork created to bring the warmth,
-    texture and changing reflections of metal into the home.
+<section class="feature">
+
+  <h2>Not Manufactured. Created.</h2>
+
+  <p>
+    The appeal of handcrafted work lies in the evidence
+    of its making. Copper is cut, hammered, curved,
+    joined and finished by hand. No two pieces need be
+    precisely alike — and that individuality is part of
+    the art.
   </p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Hand Formed</h3>
-      <p>
-        Copper is cut, shaped and finished by hand so that no two
-        works are precisely alike.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Living Surface</h3>
-      <p>
-        Light moves across the metal throughout the day, continually
-        changing the character of the work.
-      </p>
-    </div>
-  </div>
 </section>
-</div>
 
-<section id="artist">
-  <h2 class="section-title">The Coppersmith</h2>
-  <div class="about-inner">
-    <p>
-      Shooting Star celebrates the tradition of the independent
-      American artisan: original ideas transformed into enduring
-      objects through skill, patience and the maker's own hands.
-    </p>
+<section class="artist" id="artist">
 
-    <p>
-      This demonstration website illustrates how an individual
-      artisan's work can be presented online while preserving the
-      artist's own identity and visual character.
-    </p>
-  </div>
+  <h2>The Coppersmith</h2>
+
+  <p>
+    Shooting Star celebrates the imagination of the
+    working artisan: traditional metalworking skills
+    used not simply to make an object, but to give that
+    object character.
+  </p>
+
+  <p>
+    This demonstration website shows how an individual
+    artisan's work can be presented online while allowing
+    the craftsmanship itself to remain the center of the
+    experience.
+  </p>
+
 </section>
 
 <footer>
-  SHOOTING STAR COPPERSMITH • ARTISAN WEBSITE DEMONSTRATION
+  SHOOTING STAR COPPERSMITH
 </footer>
 
 </body>
